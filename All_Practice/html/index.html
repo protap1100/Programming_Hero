@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Responsive Design with Horizontal Scroll</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  display: flex;
+  overflow-x: auto;
+  /* Set a large width to trigger horizontal scrollbar */
+  width: 1200px;
+}
+
+.box {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 200px;
+  font-size: 24px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 600px) {
+  .content {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <!-- Add more content here -->
+  </div>
+
+</body>
+</html>
